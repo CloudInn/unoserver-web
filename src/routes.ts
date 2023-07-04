@@ -14,7 +14,7 @@ import { upload } from './utils/upload.js'
 
 export const routes: FastifyPluginCallback = (app, options, next) => {
 	app.post<{ Params: { format: string } }>(
-		'/convert/:format',
+		'/unoconv/:format',
 		{
 			preHandler: upload.single('file'),
 			schema: {
